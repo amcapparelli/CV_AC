@@ -1,6 +1,6 @@
 :root {
     --font-color: rgba(0, 0, 0, 1); 
-    /* $color2:  rgba(143, 0, 43, 1);
+    --title-color:  rgba(143, 0, 43, 1);
     $color3: rgba(45, 71, 57, 1);
     $color4: rgba(122, 155, 118, 1);
     $color5: rgba(186, 205, 176, 1);
@@ -9,4 +9,40 @@
 
 body {
     color: var(--font-color);
+}
+
+body h1 {
+    font-size: 2rem;
+}
+
+
+body h1, h2, h3 {
+    color: var(--title-color);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    color: var(--title-color);
+}
+
+.wrapper-title-nav {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin-top: 1rem;
+    align-items:center;
+    
+}
+
+.wrapper-nav {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+}
+
+.wrapper-nav a {
+    text-align: center;
+    
 }
