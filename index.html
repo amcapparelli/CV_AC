@@ -103,8 +103,33 @@
 
     <section id="contact">
         <header>
-            <h2>Contacto</h2>
+            <h2>¡Contáctame!</h2>
         </header>
+        <article>
+            <form action="">
+                <label for="name">Tu nombre:</label>
+                <input type="text" name="name" placeholder="nombre" required>
+                <hr>
+                <label for="email">Email</label>
+                <input type="email" placeholder="email" required>
+                <hr>
+                <span>Cómo me has conocido</span>
+                <select name= "reference" multiple size='5' >
+                    <option value="newsletter">Newsletter</option>
+                    <option value="rrss">Redes Sociales</option>
+                    <option value="client">Por recomendación</option>
+                    <option value="seminar">En un seminario</option>
+                    <option value="other">Otros</option>
+                </select>
+                <hr>
+                <label for="number">Un teléfono</label>
+                <input type="number" placeholder="móvil" >
+                <hr>
+                <input type="textarea" placeholder="mensaje" >
+                <hr>
+                <button type="submit">Enviar</button>
+            </form>
+        </article>
     </section>
     <footer>
             <span class="autor">Alejandro Capparelli</span>
