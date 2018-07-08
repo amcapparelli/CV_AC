@@ -42,7 +42,7 @@ section h3 {
 
  /* textos */
 
-body p, form span, label, input, select {
+body p, form span, label, input, select, textarea {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -213,7 +213,7 @@ form label{
     display: none;
 }
 
-form span, input, select{
+form span, input, select, textarea{
     width: 100%;
     border:0px solid;
     font-size: 1rem;
@@ -250,4 +250,10 @@ button{
 
 .hidden-field{
     display: none;
+}
+
+#counter {
+    color: var(--title-color);
+    font-family: 'Montserrat', sans-serif;
+    text-align: right;
 }
