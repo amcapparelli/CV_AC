@@ -14,16 +14,21 @@ export class Form {
                 this.otherHidden.style.display = 'none'; 
             }
     })
-        var counter = 0;
+        let counter = 0;
+        let string = '';
         
-        this.textArea.addEventListener('keypress', (e) => {
-            if(e.keyCode == 32){
-                counter++;
-                this.counter.innerHTML = 'Palabras restantes: ' + (150 - counter) 
-                if (counter == 150){
-                    this.textArea.setAttribute("maxlength", 150);
-                }
-                console.log(counter)
+        this.textArea.addEventListener('input', (e) => {
+            if (e.inputType === 'insertText'){
+                string = string.concat(e.data)
+            }else if (e.inputType === 'deleteContentBackward') {
+                string = string.slice(0, -1)
+            }
+            let wordsCounter = string.split(' ').length
+            this.counter.innerHTML = 'Palabras restantes: ' + (151 - wordsCounter) 
+            if (wordsCounter == 151){
+                this.textArea.setAttribute("maxlength", 151);
+            } else if (wordsCounter < 151){
+                this.textArea.setAttribute("maxlength", ' ')
             }
         })
     }
