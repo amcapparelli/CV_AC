@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Aleajndro Capparelli">
+    <meta name="description" content="Práctica de HTML, CSS y JS">
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+    <script src="./js/js.js" type="module"></script>
     <title>CV Alejandro Capparelli</title>
 </head>
 <body>
@@ -182,20 +185,24 @@
                 <input type="email" placeholder="email" required>
                 <hr>
                 <span>Cómo me has conocido</span>
-                <select name= "reference" multiple size='5' >
+                <select name= "reference" id="options" >
                     <option value="newsletter">Newsletter</option>
                     <option value="rrss">Redes Sociales</option>
                     <option value="client">Por recomendación</option>
                     <option value="seminar">En un seminario</option>
-                    <option value="other">Otros</option>
+                    <option value="other" name="other" >Otros</option>
                 </select>
+                <dir class="hidden-field">
+                    <label for="other">Donde:</label>
+                    <input type="text" name="other" placeholder="¿Dónde?" >
+                </dir>
                 <hr>
                 <label for="number">Un teléfono</label>
                 <input type="number" placeholder="móvil" >
                 <hr>
                 <input type="textarea" placeholder="mensaje" >
                 <hr>
-                <button type="submit">Enviar</button>
+                <button type="submit" id="btn">Enviar</button>
             </form>
         </article>
     </section>
