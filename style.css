@@ -2,7 +2,7 @@
     --font-color: rgba(0, 0, 0, 1); 
     --title-color:  rgba(143, 0, 43, 1);
     --h1-color: rgba(45, 71, 57, 1);
-    --title3-color: rgba(122, 155, 118, 1); 
+    --span-color: rgba(122, 155, 118, 1); 
     --title2-color: rgba(186, 205, 176, 1);
 }
 
@@ -131,4 +131,20 @@ section#studies img {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
+}
+
+footer{
+    margin-top: 3rem;
+    height: 3rem;
+    background-color: var(--font-color);
+    color: var(--span-color);
+}
+
+footer span, time{
+    display: block;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    text-align: right;
+    margin-right: 5%;
+    padding-top: .3rem;
 }
