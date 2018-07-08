@@ -10,19 +10,49 @@ body {
     color: var(--font-color);
 }
 
+/* Titulos */
+
 body h1 {
     font-size: 2rem;
     
 }
 
-body h1, h2, h3 {
+body h1, h2, h3, h4 {
     color: var(--h1-color);
     font-family: 'Ubuntu', sans-serif;
 }
 
+section h4 {
+    font-style: italic;
+    text-align: center;
+    padding-top: 0.5rem;
+}
+
+section h2 {
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 3rem;
+}
+
+section h3 {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+ /* textos */
+
 body p, form span, label, input, select {
     font-family: 'Montserrat', sans-serif;
 }
+
+article p {
+    margin-top: 2rem;
+    line-height: 1.5;
+    color: var(--font-color);
+}
+
+/* Titulo y Menu */
 
 .wrapper-title-nav {
     display: grid;
@@ -49,6 +79,8 @@ body p, form span, label, input, select {
     text-align: center;
     z-index: 1;   
 }
+
+/* Secciones Headers */
 
 section#cover header {
     background-size: cover;
@@ -79,27 +111,11 @@ section#cover header h2 {
     
 }
 
+/* Article y figure*/
+
 article{
     max-width: 60%;
     margin-left: 20%;
-}
-
-section h2 {
-    margin-top: 4rem;
-    text-align: center;
-    font-size: 3rem;
-}
-
-section h3 {
-    margin-top: 1.5rem;
-    text-align: center;
-    font-size: 2rem;
-}
-
-article p {
-    margin-top: 2rem;
-    line-height: 1.5;
-    color: var(--font-color);
 }
 
 figure{
@@ -120,6 +136,8 @@ figcaption{
     margin-bottom: 0.5rem;
 }
 
+/* Section Estudios */
+
 section#studies p {
     text-align: center;
 }
@@ -135,6 +153,37 @@ section#studies img {
     gap: 2rem;
 }
 
+/* Section Experiencia */
+
+.grid-experience {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 0.5rem;
+}
+.grid-experiences{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    border: 1px solid var(--title-color);
+    
+}
+.job-descriptions p, time{
+    text-align: center;
+    
+}
+.job-descriptions h3{
+    margin-top: .2rem;
+}
+
+.logos img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Footer */
+
 footer{
     margin-top: 3rem;
     height: 3rem;
@@ -142,7 +191,7 @@ footer{
     color: var(--span-color);
 }
 
-footer span, time{
+footer>span, footer>time{
     display: block;
     font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
@@ -150,6 +199,8 @@ footer span, time{
     margin-right: 5%;
     padding-top: .3rem;             
 }
+
+/* Formulario */
 
 form {
     margin-top: 2rem;
