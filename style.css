@@ -56,9 +56,8 @@ article p {
 
 .wrapper-title-nav {
     display: grid;
-    grid-template-columns: 0.5fr 1fr 2fr 0.5fr;
-    align-content: space-around;
-    gap: 1fr;
+    grid-template-columns: 0.3fr 1.5fr 2fr 0.3fr;
+    grid-gap: 2rem;
     margin-top: 1rem;
     align-items:center;   
 }
@@ -71,13 +70,20 @@ article p {
     z-index: 1;
     display: grid;
     grid-template-columns: repeat(6, auto);
+    gap: 2rem;
+    position: fixed;
+}
+
+.navActive{
+    background-color: var(--span-color);
+    font-size: 1.5rem;
 }
 
 .wrapper-nav a {
-    
     color: var(--h1-color);
     text-align: center;
-    z-index: 1;   
+    z-index: 1;
+    
 }
 
 /* Secciones Headers */
