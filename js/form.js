@@ -41,14 +41,24 @@ export class Form {
                 positions.push(position)
                 //let aActive = document.querySelector( `a[href="#${id}"]`)
             })
-
             window.addEventListener('scroll', () => {
                 let scrollPosition = window.pageYOffset
+                this.aNav.forEach(
+                    (item) => item.classList.remove('navActive')
+                )
                 if (scrollPosition < positions[0]){
                     this.aNav[0].classList = 'navActive'
-                } else if (scrollPosition > positions[0] < positions[1]){
+                } else if (scrollPosition > positions[0] && scrollPosition < positions[1]){
                     this.aNav[1].classList = 'navActive'
-            }
+                } else if (scrollPosition > positions[1] && scrollPosition < positions[2]){
+                    this.aNav[2].classList = 'navActive'
+                } else if (scrollPosition > positions[2] && scrollPosition < positions[3]){
+                    this.aNav[3].classList = 'navActive'
+                } else if (scrollPosition > positions[3] && scrollPosition < positions[4]){
+                    this.aNav[4].classList = 'navActive'
+                } else {
+                    this.aNav[5].classList = 'navActive'
+                }
         })
 
         /* Smooth Scroll */
