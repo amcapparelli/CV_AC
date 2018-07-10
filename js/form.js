@@ -60,11 +60,12 @@ export class Form {
                     let uriPosition = document.querySelector(`${hash}`).offsetTop
                     let intervals = (uriPosition/100)
                     
-                    let smoothScroll = setInterval (function () {
-                        let currentPosition = window.pageYOffset
-                        if(currentPosition<uriPosition){
-                        window.scroll(0, (currentPosition + intervals))
-                    }
+                    let sS = setInterval (function () {
+                        let newCurrentPosition = window.pageYOffset
+                        window.scroll(0, (newCurrentPosition + intervals))
+                        if (newCurrentPosition >= (uriPosition-200)){
+                            clearInterval(sS)
+                        }
                     }, 10)
 
                 })
