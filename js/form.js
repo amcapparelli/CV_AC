@@ -62,24 +62,31 @@ export class Form {
         })
 
         /* Smooth Scroll */
-
             this.aNav.forEach(item => {
                 item.addEventListener('click', (e) => {
                     e.preventDefault()
                     let hash = e.target.hash
                     let uriPosition = document.querySelector(`${hash}`).offsetTop
                     let intervals = (uriPosition/100)
-                    
+                    /* Hacia abajo */
                     let sS = setInterval (function () {
                         let newCurrentPosition = window.pageYOffset
                         window.scroll(0, (newCurrentPosition + intervals))
                         if (newCurrentPosition >= (uriPosition-200)){
                             clearInterval(sS)
-                        }
+                            
+                            /* hacia arriba */
+                            let sSBack = setInterval (function(){
+                                let positionToGoBack = window.pageYOffset
+                                window.scroll(0, (positionToGoBack - intervals))
+                                if (positionToGoBack < (uriPosition-200)){
+                                    clearInterval(sSBack)
+                                }
+                            },10)
+                        } 
                     }, 10)
-
                 })
             })
             
-        }
+    }
 }
