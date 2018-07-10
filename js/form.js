@@ -50,6 +50,25 @@ export class Form {
                     this.aNav[1].classList = 'navActive'
             }
         })
+
+        /* Smooth Scroll */
+
+            this.aNav.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault()
+                    let hash = e.target.hash
+                    let uriPosition = document.querySelector(`${hash}`).offsetTop
+                    let intervals = (uriPosition/100)
+                    
+                    let smoothScroll = setInterval (function () {
+                        let currentPosition = window.pageYOffset
+                        if(currentPosition<uriPosition){
+                        window.scroll(0, (currentPosition + intervals))
+                    }
+                    }, 10)
+
+                })
+            })
             
         }
 }
