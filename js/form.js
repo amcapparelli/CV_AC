@@ -46,9 +46,9 @@ export class Form {
                 this.aNav.forEach(
                     (item) => item.classList.remove('navActive')
                 )
-                if (scrollPosition < positions[0]){
+                if (scrollPosition < (positions[0])){
                     this.aNav[0].classList = 'navActive'
-                } else if (scrollPosition > positions[0] && scrollPosition < positions[1]){
+                } else if (scrollPosition > (positions[0]) && scrollPosition < (positions[1])){
                     this.aNav[1].classList = 'navActive'
                 } else if (scrollPosition > positions[1] && scrollPosition < positions[2]){
                     this.aNav[2].classList = 'navActive'

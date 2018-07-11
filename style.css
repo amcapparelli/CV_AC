@@ -102,7 +102,7 @@ section#cover header {
     margin-top: 1rem;
 }
 
-section#cover header::after{
+section#cover header h2::before{
     content: "";
     position: absolute;
     top: 0;
@@ -110,17 +110,15 @@ section#cover header::after{
     bottom: 0;
     right: 0;
     background-color: var(--font-color);
-    opacity: 0.5;
+    opacity: 0.2;
 }
 
 section#cover header h2 {
-    z-index: 1;
+    font-size: 5rem;
     color: white;
     float: right;
     margin-right: 10%;
-    max-width: 35%;
-    opacity: 1;
-    
+    max-width: 45%;   
 }
 
 /* Article y figure*/
@@ -194,6 +192,29 @@ section#studies img {
     margin-right: auto;
 }
 
+/* Animacion */
+
+@keyframes t {
+    
+    from {
+        margin-left: -30%;
+        transform: rotate(0deg);
+    }
+    to {
+        margin-left: 50%;
+        transform: rotate(360deg);
+     }
+    
+}
+
+#tennisball {
+    animation: t 3s infinite alternate;
+}
+
+section#about-me figure{
+    margin-top: 8%;
+}
+
 /* Footer */
 
 footer{
@@ -214,6 +235,9 @@ footer>span, footer>time{
 
 /* Formulario */
 
+section#contact {
+    margin-top: 10%;
+}
 form {
     margin-top: 2rem;
 }
