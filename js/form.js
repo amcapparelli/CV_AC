@@ -21,12 +21,17 @@ export class Form {
     })
         /* Controlar un máximo de 150 palabras en TextArea */
         let string = '';
-        this.textArea.addEventListener('input', (e) => {
-            if (e.inputType === 'insertText'){
-                string = string.concat(e.data)
-            }else if (e.inputType === 'deleteContentBackward') {
+        this.textArea.addEventListener('keydown', (e) => {
+            
+            if (e.key !== 'Backspace'){
+                string = string.concat(e.key)
+            } else {
                 string = string.slice(0, -1)
             }
+            console.log(string)
+            /* else if (e.inputType === 'deleteContentBackward') {
+                
+            } */ 
             let wordsCounter = string.split(' ').length
             this.counter.innerHTML = 'Palabras restantes: ' + (151 - wordsCounter) 
             if (wordsCounter == 151){
