@@ -43,7 +43,7 @@ export class Form {
             let positions = []
             this.sections.forEach (item => {
                 //let id = item.id
-                let position = (item.offsetTop-200)
+                let position = (item.offsetTop-280)
                 positions.push(position)
                 //let aActive = document.querySelector( `a[href="#${id}"]`)
             })
@@ -52,18 +52,16 @@ export class Form {
                 this.aNav.forEach(
                     (item) => item.classList.remove('navActive')
                 )
-                if (scrollPosition < (positions[1])){
+                if (scrollPosition < positions[2] && scrollPosition > positions[1]){
                     this.aNav[0].classList = 'navActive'
-                } else if (scrollPosition < positions[2] && scrollPosition > positions[1]){
-                    this.aNav[1].classList = 'navActive'
                 } else if (scrollPosition < positions[3] && scrollPosition > positions[2]){
-                    this.aNav[2].classList = 'navActive'
+                    this.aNav[1].classList = 'navActive'
                 } else if (scrollPosition < positions[4] && scrollPosition > positions[3]){
-                    this.aNav[3].classList = 'navActive'
+                    this.aNav[2].classList = 'navActive'
                 } else if (scrollPosition < positions[5] && scrollPosition > positions[4]){
+                    this.aNav[3].classList = 'navActive'
+                } else if (scrollPosition > positions[5]) {
                     this.aNav[4].classList = 'navActive'
-                } else {
-                    this.aNav[5].classList = 'navActive'
                 }
         })
 
