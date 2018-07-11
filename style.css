@@ -14,6 +14,7 @@ body {
 
 body h1 {
     font-size: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 body h1, h2, h3, h4 {
@@ -118,8 +119,10 @@ section#cover header h2 {
     font-size: 4rem;
     color: white;
     float: right;
+    margin-top: 10rem;
     margin-right: 10%;
     max-width: 45%;   
+    font-weight: 900;
 }
 
 /* Article y figure*/
@@ -302,9 +305,6 @@ button{
         grid-gap: 2fr;
         
     }
-    .wrapper-title-nav header{
-        grid-column-start: 2;
-    }
 
     .wrapper-nav {
         grid-template-rows: repeat(6, auto);
@@ -330,9 +330,30 @@ button{
   
     section#cover header h2{
         font-size: 3rem; 
+        margin-top: 5rem;
+        max-width: 30%;
+        font-weight: 900;
     }
     .menu-mobile {
         display: inline;
         color: var(--title-color)
     }
+}
+
+@media (max-width: 375px){
+    section#cover header h2{
+        margin-top: 7rem;
+        font-size: 2rem;
+        max-width: 50%; 
+        font-weight: 900;
+    }
+    .wrapper-title-nav{
+        display: grid;
+        grid-template-columns: .1fr 2fr 1fr .1fr;
+        grid-gap: 0.5fr;
+    }
+    .wrapper-title-nav header{
+        grid-column-start: 2;
+    }
+    
 }
