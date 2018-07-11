@@ -41,7 +41,7 @@ section h3 {
 
  /* textos */
 
-body p, form span, label, input, select, textarea {
+body p, form span, label, input, select, textarea, a {
     font-family: 'Montserrat', sans-serif;
 }
 
