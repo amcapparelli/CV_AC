@@ -6,6 +6,8 @@ export class Form {
         this.counter = document.querySelector('#counter')
         this.sections = document.querySelectorAll('section')
         this.aNav = document.querySelectorAll('[href*="#"]')
+        this.buttonMenuMobile = document.querySelector('#btn-MenuMobile')
+        this.menuMobile = document.querySelector ('.wrapper-nav')
     }
 
     eventListeners(){
@@ -87,6 +89,16 @@ export class Form {
                     }, 10)
                 })
             })
+            
+        /* mostrar menu en moviles */
+                this.buttonMenuMobile.addEventListener('click', () => {
+                    if (this.menuMobile.style.visibility == 'hidden' || 
+                        this.menuMobile.style.visibility == ''){
+                            this.menuMobile.style.visibility = 'visible'
+                        } else {
+                            this.menuMobile.style.visibility = 'hidden'
+                    }
+                })
             
     }
 }
