@@ -41,9 +41,10 @@ export class Form {
         })
         /* Modificar elementos del Nav según scroll */
             let positions = []
+            let sectionChange = (window.innerHeight/100)*80
             this.sections.forEach (item => {
                 //let id = item.id
-                let position = (item.offsetTop-280)
+                let position = (item.offsetTop - sectionChange)
                 positions.push(position)
                 //let aActive = document.querySelector( `a[href="#${id}"]`)
             })
