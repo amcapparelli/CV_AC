@@ -125,7 +125,7 @@ section#cover header h2 {
     font-weight: 900;
 }
 
-/* Article y figure*/
+/* Article, figure y video*/
 
 article{
     max-width: 60%;
@@ -148,6 +148,12 @@ figcaption{
     width: 50%;
     margin-left: 25%;
     margin-bottom: 0.5rem;
+}
+
+video {
+    margin-top: 1rem;
+    width: 100%    !important;
+    height: auto   !important;
 }
 
 /* Section Estudios */
@@ -330,8 +336,8 @@ button{
   
     section#cover header h2{
         font-size: 3rem; 
-        margin-top: 5rem;
-        max-width: 30%;
+        margin-top: 10rem;
+        max-width: 55%;
         font-weight: 900;
     }
     .menu-mobile {
@@ -354,6 +360,10 @@ button{
     }
     .wrapper-title-nav header{
         grid-column-start: 2;
+    }
+    article{
+        max-width: 80%;
+        margin: auto;
     }
     
 }
