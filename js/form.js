@@ -26,11 +26,7 @@ export class Form {
                 string = string.concat(e.key)
             } else {
                 string = string.slice(0, -1)
-            }
-            console.log(string)
-            /* else if (e.inputType === 'deleteContentBackward') {
-                
-            } */ 
+            } 
             let wordsCounter = string.split(' ').length
             this.counter.innerHTML = 'Palabras restantes: ' + (151 - wordsCounter) 
             if (wordsCounter == 151){
