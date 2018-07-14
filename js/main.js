@@ -10,7 +10,9 @@ export class Main {
         this.aNav = document.querySelectorAll('[href*="#"]')
         this.buttonMenuMobile = document.querySelector('#btn-MenuMobile')
         this.menuMobile = document.querySelector ('.wrapper-nav')
+        this.phoneField = document.querySelector('#phone')
         this.form = document.querySelector ('#form-contact')
+        this.counterphone = document.querySelector('#counterphone')
     }
 
     eventListeners(){
@@ -102,9 +104,26 @@ export class Main {
                     }
                 })
 
+            /* Validar Campo Teléfono */
+            let phoneNumber = ' '
+            this.phoneField.addEventListener('keydown', (e) => {
+                let number = e.key
+                if (e.key !== 'Backspace'){
+                    phoneNumber = phoneNumber.concat(number)
+                } else {
+                    phoneNumber = phoneNumber.slice(0, -1)
+                } 
+                if(phoneNumber.length < 10 || phoneNumber.length > 10 ){
+                    this.counterphone.style.display = 'block'
+                } else {
+                    this.counterphone.style.display = 'none'
+                }
+            })
+
          /* Guardar datos del Formulario */ 
             this.form.addEventListener('submit', this.saveData)
     }
+
     saveData(e){
         e.preventDefault()
         let form = new Form()

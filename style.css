@@ -304,7 +304,7 @@ button{
     display: none;
 }
 
-#counter {
+#counter, #counterphone {
     color: var(--title-color);
     font-family: 'Montserrat', sans-serif;
     text-align: right;

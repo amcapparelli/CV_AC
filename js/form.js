@@ -17,8 +17,5 @@ export class Form {
             donde: this.where.options[this.where.selectedIndex].value,
             otros: this.otros.value
         }
-        
-        
     }
-    
 }
