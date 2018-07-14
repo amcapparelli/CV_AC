@@ -1,7 +1,7 @@
-import { Form } from './form.js'
+import { Main } from './main.js'
 
 function load () {
     window.addEventListener("load", 
-    () => {new Form().eventListeners()})
+    () => {new Main().eventListeners()})
 }
 load ();

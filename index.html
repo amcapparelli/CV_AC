@@ -194,12 +194,12 @@
             <h2>¡Contáctame!</h2>
         </header>
         <article>
-            <form action="">
+            <form action="" id="form-contact">
                 <label for="name">Tu nombre:</label>
-                <input type="text" name="name" placeholder="nombre" required>
+                <input type="text" name="name" placeholder="nombre" id="name" required>
                 <hr>
                 <label for="email">Email</label>
-                <input type="email" placeholder="email" required>
+                <input type="email" placeholder="email" id="email" required>
                 <hr>
                 <span>Cómo me has conocido</span>
                 <select name= "reference" id="options" >
@@ -211,11 +211,11 @@
                 </select>
                 <dir class="hidden-field">
                     <label for="other">Donde:</label>
-                    <input type="text" name="other" placeholder="¿Dónde?" >
+                    <input type="text" name="other" placeholder="¿Dónde?" id="otros" >
                 </dir>
                 <hr>
                     <label for="number">Un teléfono</label>
-                    <input type="tel" pattern="[0-9]{9}" placeholder="móvil" >
+                    <input type="tel" pattern="[0-9]{9}" placeholder="móvil" id="phone" >
                 <hr>
                     <textarea id="textarea"  rows="5"  placeholder="mensaje" ></textarea>
                     <div id="counter"></div>
