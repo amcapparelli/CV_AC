@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    <url>
+        <loc>http://kylo.rockstardevops.com</loc>
+        <image:image>
+            <image:loc>http://kylo.rockstardevops.com./img/kc logo.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>http://kylo.rockstardevops.com./img/ucm logo.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>http://kylo.rockstardevops.com./img/ucu logo.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>http://kylo.rockstardevops.com./img/rs logo.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>http://kylo.rockstardevops.com./img/EdLI logo.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>http://kylo.rockstardevops.com./img/logo_maravillas.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>http://kylo.rockstardevops.com./img/Feng_office logo.png</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>http://kylo.rockstardevops.com./img/logo-abitab.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>http://kylo.rockstardevops.com./img/tenisball.png</image:loc>
+        </image:image>
+    </url>
+</urlset>

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://kylo.rockstardevops.com/sitemap.xml
+Sitemap: http://kylo.rockstardevops.com/image-sitemap.xml

@@ -42,7 +42,7 @@ export class Main {
         })
         /* Modificar elementos del Nav según scroll */
             let positions = []
-            let sectionChange = (window.innerHeight/100)*80
+            let sectionChange = (window.innerHeight/100)*50
             this.sections.forEach (item => {
                 //let id = item.id
                 let position = (item.offsetTop - sectionChange)
@@ -74,11 +74,12 @@ export class Main {
                     let hash = e.target.hash
                     let uriPosition = document.querySelector(`${hash}`).offsetTop
                     let intervals = (uriPosition/100)
+
                     /* Hacia abajo */
                     let sS = setInterval (function () {
                         let newCurrentPosition = window.pageYOffset
                         window.scroll(0, (newCurrentPosition + intervals))
-                        if (newCurrentPosition >= (uriPosition-200)){
+                        if (newCurrentPosition >= (uriPosition-360)){
                             clearInterval(sS)
                             
                             /* hacia arriba */
